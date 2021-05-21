@@ -55,8 +55,6 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
   }
 
   _switchCurrencies() {
-    print(sourceCurrency);
-    print(baseCurrency);
     var tempCurrency = baseCurrency;
     var tempAbr = currencyVal;
     setState(() {
@@ -65,6 +63,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
       baseCurrency = sourceCurrency;
       sourceCurrency = tempCurrency;
     });
+    _doConversion();
   }
 
   _onBaseCurrencyChanged(String? value) {
