@@ -14,3 +14,8 @@ To run the application on the web, do the following:
 * You should have Xcode installed
 * For more information, check [here](https://flutter.dev/docs/get-started/install)
 * Run using `flutter run`
+
+### Difficulties
+
+* Had to learn a ton to implement this project relating to Flutter and Dart
+* Trying to match the designs which required Path knowledge
