@@ -54,6 +54,19 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
     return "Success";
   }
 
+  _switchCurrencies() {
+    print(sourceCurrency);
+    print(baseCurrency);
+    var tempCurrency = baseCurrency;
+    var tempAbr = currencyVal;
+    setState(() {
+      currencyVal = toCurrencyVal;
+      toCurrencyVal = tempAbr;
+      baseCurrency = sourceCurrency;
+      sourceCurrency = tempCurrency;
+    });
+  }
+
   _onBaseCurrencyChanged(String? value) {
     setState(() {
       baseCurrency = value!;
@@ -86,7 +99,11 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
         elevation: 0,
       ),
       body: symbols.length == 0
-          ? Center(child: CircularProgressIndicator())
+          ? Center(
+              child: Wrap(children: [
+              CircularProgressIndicator(),
+              Text('  Getting symbols...')
+            ]))
           : Container(
               // height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
@@ -157,7 +174,16 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                                                             baseCurrencyTextController
                                                                 .text),
                                                         symbol: baseCurrency),
-                                                  ))
+                                                  )),
+                                        Row(
+                                          children: [
+                                            Text('Tap here to input a value...',
+                                                style: TextStyle(
+                                                    color: Colors.grey.shade600,
+                                                    fontStyle:
+                                                        FontStyle.italic))
+                                          ],
+                                        )
                                       ])
                                     ],
                                   )))),
@@ -167,7 +193,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                                 backgroundColor: Colors.indigo.shade100,
                                 child: Icon(Icons.compare_arrows),
                                 elevation: 0.1,
-                                onPressed: () {}))
+                                onPressed: _switchCurrencies)),
                       ]),
                       Container(
                           decoration: BoxDecoration(
