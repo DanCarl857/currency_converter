@@ -1,16 +1,16 @@
 # currency_converter
 
-A new Flutter project.
+Simple currency converter app built with Flutter
 
-## Getting Started
+### Running Application
 
-This project is a starting point for a Flutter application.
+To run the application on the web, do the following:
+* Change into the root directory: `cd currency_converter`
+* Get dependencies: `flutter pub get`
+* You should have chrome installed: `flutter run -d chrome`
 
-A few resources to get you started if this is your first Flutter project:
+### Running in the Simulator
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* You should have Xcode installed
+* For more information, check [here](https://flutter.dev/docs/get-started/install)
+* Run using `flutter run`
