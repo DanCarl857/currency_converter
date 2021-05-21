@@ -1,6 +1,7 @@
 # currency_converter
 
 Simple currency converter app built with Flutter
+Project was primarily built for iOS using the iPhone 12 Simulator
 
 ### Running Application
 
