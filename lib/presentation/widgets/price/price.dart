@@ -17,12 +17,18 @@ class _AvalaPriceState extends State<AvalaPrice> {
       textBaseline: TextBaseline.ideographic,
       children: [
         Text(
-          widget.symbol,
-          style: TextStyle(color: Colors.deepPurple[500], fontSize: 20),
+          widget.symbol + ' ',
+          style: TextStyle(
+              color: Colors.deepPurple[500],
+              fontSize: 25,
+              fontWeight: FontWeight.w300),
         ),
         Text(
           widget.value.toString(),
-          style: TextStyle(color: Colors.deepPurple[500], fontSize: 35),
+          style: TextStyle(
+              color: Colors.deepPurple[500],
+              fontSize: 50,
+              fontWeight: FontWeight.w300),
         )
       ],
     );

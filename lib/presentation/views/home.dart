@@ -1,18 +1,16 @@
-import 'package:currency_converter/presentation/widgets/card/card.dart';
+import 'package:currency_converter/presentation/widgets/currency_converter/currency_converter.dart';
 import 'package:flutter/material.dart';
 
-class AvalaHome extends StatelessWidget {
+class AvalaHome extends StatefulWidget {
+  @override
+  _AvalaHomeState createState() => _AvalaHomeState();
+}
+
+class _AvalaHomeState extends State<AvalaHome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 30.0),
-      child: Center(
-          child: Column(
-        children: [
-          AvalaCard(reverseOrder: false),
-          AvalaCard(reverseOrder: true)
-        ],
-      )),
+      child: Center(child: CurrencyConverter()),
     );
   }
 }

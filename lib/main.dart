@@ -1,18 +1,14 @@
 import 'package:currency_converter/presentation/views/home.dart';
-import 'package:currency_converter/presentation/widgets/card/card.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
-void main() => runApp(CurrencyConverter());
+void main() => runApp(MyApp());
 
-class CurrencyConverter extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.purple.shade900),
-        home: Scaffold(
-            appBar: AppBar(title: Text('Currency Converter')),
-            body: AvalaHome()));
+        home: Scaffold(body: AvalaHome()));
   }
 }
