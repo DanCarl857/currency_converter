@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AvalaPrice extends StatefulWidget {
-  final int value;
+  final double value;
   final String symbol;
   AvalaPrice({Key? key, required this.value, required this.symbol});
 

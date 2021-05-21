@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primaryColor: Colors.purple.shade900),
+        theme: ThemeData(primaryColor: Colors.white),
         home: Scaffold(body: AvalaHome()));
   }
 }
