@@ -158,6 +158,9 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                                                 ? TextField(
                                                     controller:
                                                         baseCurrencyTextController,
+                                                    keyboardType: TextInputType
+                                                        .numberWithOptions(
+                                                            decimal: true),
                                                     decoration: InputDecoration(
                                                       border:
                                                           OutlineInputBorder(),
